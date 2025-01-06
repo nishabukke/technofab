@@ -563,7 +563,7 @@ ul{
 }
 
 .left-about-inner-item img{
-    width: 60px;
+    width: 80px;
 }
 
 .right-about{
@@ -580,16 +580,16 @@ ul{
 .right-about::before{
     content: "";
     position: absolute;
-    left: -40px;
-    top: 87px;
+    left: -65px;
+    top: 50px;
     right: 65px;
-    bottom: 0;
+    bottom: 40px;
     border: 6px solid #ef7f1a;
 }
 
 .about-caption{
-    margin-top: 44px;
-    padding: 0 130px 49px 0;
+    margin-top: 20px;
+    padding: 0 95px 40px 0;
 }
 
 .about-title{
@@ -602,9 +602,9 @@ ul{
     margin-top: 15px;
 }
 
-.post-link{
+.right-about .post-link{
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     right: 15px;
     transform: rotate(-90deg) translateX(100%);
     transform-origin: 100% 100%;
@@ -809,6 +809,11 @@ ul{
 .news-inner-item h2{
     position: relative;
     padding-left: 20px;
+    font-size: 20px;
+}
+
+.news-inner-item p{
+    text-align: justify;
 }
 
 .news-inner-item h2::before{
