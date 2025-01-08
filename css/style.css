@@ -324,6 +324,7 @@ ul{
 
 .mobile-menu-container .logo p{
     line-height: 1;
+    display: none;
 }
 
 /* mobile menu css */
@@ -467,8 +468,9 @@ ul{
 }
 
 .logo img{
-    width: 50px;
+    width: 80px;
     height: 50px;
+    background-color: #fff;
 }
 
 
@@ -482,6 +484,8 @@ ul{
 
 .home-banner-heading{
     position: relative;
+    animation-duration: 1s;
+    animation-delay: .3s;
 }
 
 .home-banner-heading .light{
@@ -503,6 +507,18 @@ ul{
     width: 5px;
 }
 
+.animated {
+    animation-fill-mode: both;
+}
+
+.fade-in{
+    animation-name: fadeIn;
+}
+
+.fade-in-left{
+    animation-name: fadeInLeft;
+}
+
 .home-banner-heading .bold{
     font-weight: 700;
     color: #fff;
@@ -511,6 +527,7 @@ ul{
     margin: 0;
     padding-left: 20px;
 }
+
 
 .home-banner-heading p{
     padding-left: 20px;
@@ -527,6 +544,8 @@ ul{
     display: flex;
     gap: 20px;
     padding-left: 30px;
+    animation-duration: 1s;
+    animation-delay: 1s;
 }
 
 
@@ -930,15 +949,411 @@ ul{
 /* footer css end */
 
 
+/* animations css code */
+
+.reveal{
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+
+.active.fade-up {
+    animation: fade-up 1s ease-in;
+  }
+
+  .active.fade-up-form {
+    animation: fade-up-form 1s ease-in;
+  }
+
+  .active.fadeInLeft {
+    animation: fadeInLeft 1s ease;
+  }
+  
+  .active.fadeInRight {
+    animation: fadeInRight 1s ease;
+  }
+
+  .active.fadeIn{
+    animation: fadeIn 1s ease;
+  }
+
+  .active.fadeInDown{
+    animation: fadeInDown 1s ease;
+  }
+
+  .active.fadeInAnimation{
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  } 
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%,0,0);
+      transform: translate3d(-100%,0,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(100%,0,0);
+      transform: translate3d(100%,0,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-50px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 
 
 
+  @media screen and (max-width: 768px) {
+
+    .header-inner, #header{
+        display: none;
+    }
+
+    .mobile-header{
+        display: block;
+    }
+
+    .active.fadeIn, .active.fade-up, .active.fadeInLeft, .active.fadeInDown, .active.fadeIn{
+        animation: none;
+    }
+
+    .section_lg{
+        padding: 50px 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .secondary-heading {
+        font-size: 20px;
+    }
+    
+    .yellow-btn, .right-production .yellow-btn {
+        padding: 5px 15px;
+    }
+
+    .yellow-btn a, .right-production .yellow-btn{
+        font-size: 14px;
+    }
+
+    .home-banner-content{
+        margin-top: 0 !important;
+    }
+
+    .lower-header{
+        padding: 60px 0px 60px 0px;
+    }
+
+    .home-banner-heading .light {
+        width: 100%;
+        font-size: 34px;
+    }
+
+    .home-banner-heading .bold {
+        font-weight: 600;
+        color: #fff;
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .home-banner-heading p {
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .about-section, .left-about-inner, .production-section, .news-inner{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+
+    .left-about p, .right-production p{
+        font-size: 14px;
+    }
+
+    .left-about-inner-item img {
+        width: 60px;
+    }
+
+    .left-about {
+        padding-left: 20px;
+    }
+
+    .left-about-inner-item {
+        gap: 5px;
+    }
+
+    .right-about::before, .left-production::before {
+        display: none;
+    }
+
+    .left-production, .right-about{
+        max-width: fit-content;
+    }
+
+    .right-about .post-link, .post-link{
+        display: none;
+    }
+
+    .about-caption{
+        padding: 0;
+    }
+
+    .about-title {
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    .about-desc {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .sales-caption {
+        margin-top: 25px;
+        padding: 0;
+    }
+
+    .right-production-inner {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 65px;
+  }
+
+  .right-production-inner-item .secondary-heading{
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .right-production-inner-item img{
+    width: 100px;
+  }
+
+  .news-title{
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .news-title .yellow-btn{
+    display: none;
+  }
+
+  .footer-inner{
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+  }
+
+  .footer-item h3 {
+    margin-bottom: 10px;
+    }
 
 
+}
 
 
+  @media screen and (max-width: 320px) {
+
+    .header-inner, #header{
+        display: none;
+    }
+
+    .mobile-header{
+        display: block;
+    }
+
+    .active.fadeIn, .active.fade-up, .active.fadeInLeft, .active.fadeInDown, .active.fadeIn{
+        animation: none;
+    }
+
+    .section_lg{
+        padding: 50px 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .secondary-heading {
+        font-size: 20px;
+    }
+    
+    .yellow-btn, .right-production .yellow-btn {
+        padding: 5px 15px;
+    }
+
+    .yellow-btn a, .right-production .yellow-btn{
+        font-size: 14px;
+    }
+
+    .home-banner-content{
+        margin-top: 0 !important;
+    }
+
+    .lower-header{
+        padding: 60px 0px 60px 0px;
+    }
+
+    .home-banner-heading .light {
+        width: 100%;
+        font-size: 34px;
+    }
+
+    .home-banner-heading .bold {
+        font-weight: 600;
+        color: #fff;
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .home-banner-heading p {
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .about-section, .left-about-inner, .production-section, .news-inner{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+
+    .left-about p, .right-production p{
+        font-size: 14px;
+    }
+
+    .left-about-inner-item img {
+        width: 60px;
+    }
+
+    .left-about {
+        padding-left: 20px;
+    }
+
+    .left-about-inner-item {
+        gap: 5px;
+    }
+
+    .right-about::before, .left-production::before {
+        display: none;
+    }
+
+    .left-production, .right-about{
+        max-width: fit-content;
+    }
+
+    .right-about .post-link, .post-link{
+        display: none;
+    }
+
+    .about-caption{
+        padding: 0;
+    }
+
+    .about-title {
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    .about-desc {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .sales-caption {
+        margin-top: 25px;
+        padding: 0;
+    }
+
+    .right-production-inner {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 65px;
+  }
+
+  .right-production-inner-item .secondary-heading{
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .right-production-inner-item img{
+    width: 100px;
+  }
+
+  .news-title{
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .news-title .yellow-btn{
+    display: none;
+  }
+
+  .footer-inner{
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+  }
+
+  .footer-item h3 {
+    margin-bottom: 10px;
+    }
 
 
+}
 
 
 

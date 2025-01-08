@@ -1,3 +1,41 @@
+// mobile menu
+
+$( document ).ready(function() {
+
+  $( ".cross" ).hide();
+  $( ".menu" ).hide();
+  $( ".canva_expander" ).click(function() {
+  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".canva_expander" ).hide();
+  $( ".cross" ).show();
+  });
+  });
+  
+  $( ".cross" ).click(function() {
+  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".cross" ).hide();
+  $( ".canva_expander" ).show();
+  });
+  });
+  
+  });
+
+ // Close out sub menu
+ $('.sub__close').click(function(e) {
+  e.preventDefault();
+  
+  $(this).parent().parent().removeClass('is-active');
+});
+
+// Trigger sub menu
+$('.menu ul .nav__submenu').click(function(e) {
+  e.preventDefault();
+  
+  $(this).siblings().addClass('is-active');
+});
+
+
+
 // counters
 
 var counted = 0;
@@ -35,6 +73,23 @@ $(window).scroll(function() {
 
 });
 
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
 
 // sticky header
 
@@ -59,44 +114,6 @@ $(window).on("scroll touchmove", function() {
   
 });
 
-
-
-
-// mobile menu
-
-$( document ).ready(function() {
-
-    $( ".cross" ).hide();
-    $( ".menu" ).hide();
-    $( ".canva_expander" ).click(function() {
-    $( ".menu" ).slideToggle( "slow", function() {
-    $( ".canva_expander" ).hide();
-    $( ".cross" ).show();
-    });
-    });
-    
-    $( ".cross" ).click(function() {
-    $( ".menu" ).slideToggle( "slow", function() {
-    $( ".cross" ).hide();
-    $( ".canva_expander" ).show();
-    });
-    });
-    
-    });
-  
-   // Close out sub menu
-   $('.sub__close').click(function(e) {
-    e.preventDefault();
-    $( ".sub__close" ).hide();
-    // $(this).parent().parent().removeClass('is-active');
-  });
-  
-  // Trigger sub menu
-  $('.menu ul .nav__submenu').click(function(e) {
-    e.preventDefault();
-    
-    $(this).siblings().addClass('is-active');
-  });
 
 
   // Floating caption
