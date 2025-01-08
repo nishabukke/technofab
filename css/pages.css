@@ -1966,7 +1966,7 @@ ul{
 }
 
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 450px) {
 
     .header-inner, #header{
         display: none;
