@@ -140,11 +140,19 @@ ul{
     transform: translateY(0);
 } */
 
-.lower-header{
+.lower-header, .lower-header.ind-fab{
     background-image: url('../images/about-bg.jpg');
     background-size: cover;
     background-position: center;
     background-position: center center;
+}
+
+.lower-header.ind-fab, .lower-header.ind-prod{
+    background-image: url('../images/home-banner3.jpg');
+}
+
+.lower-header.peb-home-banner{
+    background-image: url('../images/peb-products/peb-product5.jfif');
 }
 
 .header-inner{
