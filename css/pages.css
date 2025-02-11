@@ -28,10 +28,11 @@ a:hover{
 
 ul{
     list-style-type: none;
+    padding: 0;
 }
 
 .section_lg{
-    padding: 90px 30px;
+    padding: 50px 30px;
 }
 
 .yellow-btn{
@@ -957,7 +958,7 @@ ul{
     color: #1b4883;
 }
 
-.saw-detail-item p ul{
+.saw-detail-item ul{
     padding-left: 40px;
     margin-bottom: 0;
 }
@@ -1062,15 +1063,10 @@ ul{
     font-weight: 600;
 }
 
-.peb-img-section{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 40px;
-}
-
-.left-peb-img img{
+.peb-img-section img{
     width: 100%;
 }
+
 
 /* peb blog css */
 
@@ -1087,6 +1083,11 @@ ul{
     gap: 15px;
     padding: 20px;
     background-color: rgb(239, 127, 26, .2);
+}
+
+.peb-flowchart img{
+    width: 100%;    
+    margin-top: 40px;
 }
 
 /* PEB Page css end */
@@ -1203,6 +1204,11 @@ ul{
     gap: 15px;
 }
 
+.inspection-process-item img{
+    width: 50px;
+    height: 50px;
+}
+
 /* industrial fabrication css end */
 
 
@@ -1291,6 +1297,47 @@ ul{
 }
 
 /* news section css end */
+
+/* updates page css start */
+
+.news-events-inner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.news-events-inner-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-events-inner-item img{
+    width: 100%;
+    height: 250px;
+}
+
+.news-events-inner-item h2{
+    position: relative;
+    padding-left: 20px;
+    font-size: 19px;
+}
+
+.news-events-inner-item p{
+    text-align: justify;
+}
+
+.news-events-inner-item h2::before{
+    content: "";
+    position: absolute;
+    background-color: #ef7f1a;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    width: 4px;
+}
+
+/* updates page css end */
 
 
 /* contact section css start */
@@ -1382,18 +1429,18 @@ ul{
     -o-object-fit: cover;
        object-fit: cover;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    height: 100%;
+    height: 230px;
     width: 100%;
   }
-  .gallery__image:hover {
+  /* .gallery__image:hover {
     cursor: pointer;
     opacity: 0.7;
     transform: scale(1.15);
   }
   .gallery__image:hover + .gallery__image__caption {
     display: block;
-  }
-  .gallery__image__caption {
+  } */
+  /* .gallery__image__caption {
     display: none;
     position: absolute;
     top: 0;
@@ -1406,7 +1453,7 @@ ul{
     padding: 1rem;
     white-space: nowrap;
     z-index: 1;
-  }
+  } */
   .gallery__navigation--next, .gallery__navigation--prev, .gallery__navigation--close {
     position: absolute;
     display: flex;
@@ -1491,6 +1538,30 @@ ul{
   .noscroll {
     overflow: hidden;
   }
+
+  .TabButton {
+    width: 100%;
+  color: #5A5A61;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.TabButtonSelected {
+
+  color: #1b4883 !important;
+  border-bottom-color: #ef7f1a !important;
+  font-weight: 600;
+}
+.d-chart-n {
+display: none;
+}
+
+.d-chart-show {
+display: block;
+}
   
 
 /* gallery page css end */
@@ -1674,7 +1745,7 @@ ul{
     }
 
     .section_lg{
-        padding: 50px 30px;
+        padding: 30px 30px;
     }
 
     .vm-heading{
@@ -1724,7 +1795,7 @@ ul{
         width: 100%;
     }
     
-    .about-section, .left-about-inner, .production-section, .news-inner, .vision-mission-inner, .guiding-principle-inner, .why-choose-inner, .right-why-choose, .usp-inner, .inspection-process-inner, .peb-section-inner , .peb-img-section, .why-choose-peb-inner, .pri-comp-peb-section, .right-pc-peb, .why-peb-matter-inner, .systems-at-work-section, .contact-inner, .form-links{
+    .about-section, .left-about-inner, .production-section, .news-inner, .vision-mission-inner, .guiding-principle-inner, .why-choose-inner, .right-why-choose, .usp-inner, .inspection-process-inner, .peb-section-inner , .peb-img-section, .why-choose-peb-inner, .pri-comp-peb-section, .right-pc-peb, .why-peb-matter-inner, .systems-at-work-section, .contact-inner, .form-links, .news-events-inner{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
     }
@@ -1808,6 +1879,10 @@ ul{
 
   .footer-item h3 {
     margin-bottom: 10px;
+    }
+        
+    .footer-item ul li a{
+        font-size: 14px;
     }
 
    /* smart values css */
@@ -1985,7 +2060,7 @@ ul{
     }
 
     .section_lg{
-        padding: 50px 30px;
+        padding: 30px 30px;
     }
 
     .vm-heading{
@@ -2014,10 +2089,6 @@ ul{
         padding-bottom: 0;
     }
 
-    .lower-header{
-        padding: 60px 0px 60px 0px;
-    }
-
     .home-banner-heading .light {
         width: 100%;
         font-size: 34px;
@@ -2038,6 +2109,10 @@ ul{
     .about-section, .left-about-inner, .production-section, .news-inner, .vision-mission-inner, .guiding-principle-inner, .why-choose-inner, .right-why-choose, .usp-inner, .inspection-process-inner, .peb-section-inner , .peb-img-section, .why-choose-peb-inner, .pri-comp-peb-section, .right-pc-peb, .why-peb-matter-inner, .systems-at-work-section, .contact-inner, .form-links{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
+    }
+
+    .gallery-section .d-flex{
+        flex-direction: column;
     }
 
     .left-about p, .right-production p{
@@ -2112,6 +2187,10 @@ ul{
     display: none;
   }
 
+  .news-inner-item {
+    gap: 15px;
+    }
+
   .footer-inner{
     grid-template-columns: repeat(1,1fr);
     gap: 20px;
@@ -2119,6 +2198,10 @@ ul{
 
   .footer-item h3 {
     margin-bottom: 10px;
+    }
+        
+    .footer-item ul li a{
+        font-size: 14px !important;
     }
 
    /* smart values css */
@@ -2208,6 +2291,10 @@ ul{
         font-size: 20px;
     }
 
+    .peb-flowchart img {
+        margin-top: 10px;
+    }
+
     .bullet-points-peb li {
         padding: 5px 0px;
         font-size: 14px;
@@ -2274,4 +2361,10 @@ ul{
     .right-contact{
         gap: 20px;
     }
+
+    .saw-detail-item ul{
+        padding-left: 20px;
+        margin-bottom: 0;
+    }
+    
 }
