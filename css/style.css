@@ -985,6 +985,50 @@ ul{
 
 /* footer css end */
 
+/* newslette css code */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+.modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    display: block;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.download-btn {
+    position: absolute;
+    bottom: 0;
+    background: #1b4883;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.download-btn:hover{
+    color: #fff;
+    background-color: #ef7f1a;
+}
+
 
 /* animations css code */
 
@@ -1244,7 +1288,6 @@ ul{
     }
 }
 
-
   @media screen and (max-width: 450px) {
 
     .header-inner, #header{
@@ -1395,8 +1438,6 @@ ul{
     .footer-item ul li a{
         font-size: 14px;
     }
-
-
 }
 
 

@@ -195,7 +195,7 @@
                                 <li class="nav-link">
                                     <a href="gallery.html">Product Gallery</a>
                                 </li> 
-                                <li><a href="#" class="yellow-btn">view catalogue</a></li>
+                                <!-- <li><a href="#" class="yellow-btn">view catalogue</a></li> -->
                             </ul>
                         </nav>
                     </div>
@@ -255,58 +255,7 @@
             </div>
         </div>
     </section>
-
-    <section class="smart section_lg">
-        <div class="container-fluid">
-            <div class="letter-container">
-                <div class="title">trength</div>
-                <div class="desc">Techno Fab delivers durable, high-strength structures designed to stand the test of time. Our strength extends beyond products to encompass robust processes, decisive leadership, and resilient decision-making. By focusing on durability and performance, we ensure that every project upholds superior load-bearing capacity and excels in challenging environments.
-                <div class="relative-cont">
-                    <div class="left-letter">S</div>
-                </div>
-                    <div class="right-icon"><img src="images/strength.png" alt=""></div>
-                </div>
-            </div>
-            <div class="letter-container">
-                <div class="title">astery</div>
-                <div class="desc">Our expertise lies in precision engineering, welding, and advanced fabrication techniques. At Techno Fab, we pursue mastery by continuously refining our skills and processes. This dedication ensures superior quality, minimal errors, and components crafted to perfection, making us a trusted name for fabrication excellence.
-                <div class="relative-cont">
-                    <div class="left-letter">M</div>
-                </div>
-                    <div class="right-icon"><img src="images/mastery.png" alt=""></div>
-                </div>
-            </div>
-            <div class="letter-container">
-                <div class="title">gility</div>
-                <div class="desc">Flexibility and adaptability are key to meeting the evolving needs of our clients and the dynamic demands of the market. Techno Fab’s agile approach enables us to respond swiftly to client requirements, manage last-minute design changes, and maintain efficiency in project execution. This ensures timely delivery and complete customer satisfaction.
-                <div class="relative-cont">
-                    <div class="left-letter">A</div>
-                </div>
-                    <div class="right-icon"><img src="images/agility.png" alt=""></div>
-                </div>
-            </div>
-            <div class="letter-container">
-                <div class="title">eliability</div>
-                <div class="desc">Reliability is the cornerstone of our operations. From meticulous project planning to seamless supply chain management, Techno Fab guarantees consistent, on-time delivery of high-quality products. Our dependable performance fosters strong client relationships, ensuring trust and repeat business.
-                <div class="relative-cont">
-                    <div class="left-letter">R</div>
-                </div>
-                    <div class="right-icon"><img src="images/reliability.png" alt=""></div>
-                </div>
-            </div>
-            <div class="letter-container">
-                <div class="title">rust</div>
-                <div class="desc">Built on integrity, transparency, and ethical practices, Techno Fab prioritizes honest communication and accountability in every interaction. Trust is not just a value; it is the foundation of our relationships with clients, suppliers, and employees. We honor every commitment with dedication and reliability.
-                <div class="relative-cont">
-                    <div class="left-letter">T</div>
-                </div>
-                    <div class="right-icon"><img src="images/trust.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
+ 
     <section class="vision-mission section_lg">
         <div class="container-fluid">
             <div class="vm-heading">
@@ -345,11 +294,14 @@
                 <ul>
                     <li><a href="industrial-fabrication.html"><span class="fas fa-angle-right"></span>Industrial Fabrication</a></li>
                     <li><a href="peb.html"><span class="fas fa-angle-right"></span>Pre Engineered Building ( PEB)</a></li>
-                    <li><a href="gallery.html"><span class="fas fa-angle-right"></span>Portable Cabins</a></li>
+                    <li><a href="peb-products.html"><span class="fas fa-angle-right"></span>Sustainable Steel Building</a></li>
                 </ul>
             </div>
             <div class="footer-item">
                 <h3 class="text-white fw-bold">Newsletter</h3>
+                <ul>
+                    <li><a href="#" id="openModal"><span class="fas fa-angle-right"></span> Newsletter</a></li>
+                </ul>
                 <p class="m-0 text-white">Subscribe to our newsletter to receive updates on our company's products and news.</p>
                 <div class="input-btn">
                     <input type="text" name="email" id="" placeholder="Enter your email">
@@ -367,8 +319,26 @@
         </div>
     </footer>
     
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="./images/newsletter.jpeg" alt="Newsletter Image">
+        <a id="downloadBtn" class="download-btn" download="newsletter.jpg">Download</a>
+    </div>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+         document.getElementById("openModal").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("downloadBtn").href = "./images/newsletter.jpeg";
+        });
+
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("imageModal").style.display = "none";
+        });
+    </script>
 
 
     

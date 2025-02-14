@@ -195,7 +195,7 @@
                                 <li class="nav-link">
                                     <a href="gallery.html">Product Gallery</a>
                                 </li> 
-                                <li><a href="#" class="yellow-btn">view catalogue</a></li>
+                                <!-- <li><a href="#" class="yellow-btn">view catalogue</a></li> -->
                             </ul>
                         </nav>
                     </div>
@@ -267,11 +267,6 @@
         </div>
         <div class="news-events-inner mt-5">
             <div class="news-events-inner-item reveal fade-up">
-                <img src="images/ganpati.jpg" alt="news img">
-                <h2 class="secondary-heading">Ganapati Bappa: Crafted from Indian Parts for a US-Based Customer</h2>
-                <p class="m-0 secondary-color news-desc">At Technofab India, we take immense pride in showcasing our contribution to developing a unique Ganapati Bappa idol for a US-based customer, made entirely from parts sourced and manufactured in India. This project highlights not only our dedication to delivering quality but also our expertise in managing complex supply chains across borders.</p>
-            </div>
-            <div class="news-events-inner-item reveal fade-up">
                 <img src="images/e-book.jpg" alt="news img">
                 <h2 class="secondary-heading">Business Coach Rajiv Talareja Inaugurates Our E-Book on Strategic Sourcing at MBA Event in Mumbai</h2>
                 <p class="m-0 secondary-color news-desc">We are thrilled to announce the inauguration of our latest e-book, "Steps in Strategic Sourcing," by none other than our esteemed business coach, Rajiv Talareja, at a prestigious MBA event in Mumbai. It was a great honor to be recognized at such a platform, and having Rajiv Talareja unveil our e-book added an extra layer of significance to this milestone.</p>
@@ -322,11 +317,14 @@
                 <ul>
                     <li><a href="industrial-fabrication.html"><span class="fas fa-angle-right"></span>Industrial Fabrication</a></li>
                     <li><a href="peb.html"><span class="fas fa-angle-right"></span>Pre Engineered Building ( PEB)</a></li>
-                    <li><a href="gallery.html"><span class="fas fa-angle-right"></span>Portable Cabins</a></li>
+                    <li><a href="peb-products.html"><span class="fas fa-angle-right"></span>Sustainable Steel Building</a></li>
                 </ul>
             </div>
             <div class="footer-item">
                 <h3 class="text-white fw-bold">Newsletter</h3>
+                <ul>
+                    <li><a href="#" id="openModal"><span class="fas fa-angle-right"></span> Newsletter</a></li>
+                </ul>
                 <p class="m-0 text-white">Subscribe to our newsletter to receive updates on our company's products and news.</p>
                 <div class="input-btn">
                     <input type="text" name="email" id="" placeholder="Enter your email">
@@ -344,8 +342,26 @@
         </div>
     </footer>
     
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="./images/newsletter.jpeg" alt="Newsletter Image">
+        <a id="downloadBtn" class="download-btn" download="newsletter.jpg">Download</a>
+    </div>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+         document.getElementById("openModal").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("downloadBtn").href = "./images/newsletter.jpeg";
+        });
+
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("imageModal").style.display = "none";
+        });
+    </script>
 
 
     

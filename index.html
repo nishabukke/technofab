@@ -195,7 +195,7 @@
                                 <li class="nav-link">
                                     <a href="gallery.html">Product Gallery</a>
                                 </li> 
-                                <li><a href="#" class="yellow-btn">view catalogue</a></li>
+                                <!-- <li><a href="#" class="yellow-btn">view catalogue</a></li> -->
                             </ul>
                         </nav>
                     </div>
@@ -214,20 +214,20 @@
                     <video src="images/home-banner-video.mp4" muted autoplay loop class="w-100"></video>
                   </div>
                   <div class="carousel-item">
-                    <img src="images/home-banner1.jpg" class="d-block w-100" alt="...">
+                    <img src="images/home-banner1.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
                     <img src="images/home-banner2.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/home-banner4.jpg" class="d-block w-100" alt="...">
+                    <img src="images/home-banner4.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/home-banner3.jpg" class="d-block w-100" alt="...">
+                    <img src="images/home-banner3.png" class="d-block w-100" alt="...">
                   </div>
                 </div>
               </div>
-            <div class="home-banner-content container-fluid mt-5">
+            <!-- <div class="home-banner-content container-fluid mt-5">
                 <div class="home-banner-heading container-fluid animated fade-in-left">
                     <h1 class="light">Techno Fab</h1>
                     <h1 class="bold">Industrial Fabrication with Quality, Innovation, and Sustainability.</h1>
@@ -236,7 +236,7 @@
                 <div class="home-banner-btns container-fluid animated fade-in">
                     <div class="yellow-btn"><a href="">view catalogue</a></div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -454,11 +454,14 @@
                 <ul>
                     <li><a href="industrial-fabrication.html"><span class="fas fa-angle-right"></span>Industrial Fabrication</a></li>
                     <li><a href="peb.html"><span class="fas fa-angle-right"></span>Pre Engineered Building ( PEB)</a></li>
-                    <li><a href="gallery.html"><span class="fas fa-angle-right"></span>Portable Cabins</a></li>
+                    <li><a href="peb-products.html"><span class="fas fa-angle-right"></span>Sustainable Steel Building</a></li>
                 </ul>
             </div>
             <div class="footer-item">
                 <h3 class="text-white fw-bold">Newsletter</h3>
+                <ul>
+                    <li><a href="#" id="openModal"><span class="fas fa-angle-right"></span> Newsletter</a></li>
+                </ul>
                 <p class="m-0 text-white">Subscribe to our newsletter to receive updates on our company's products and news.</p>
                 <div class="input-btn">
                     <input type="text" name="email" id="" placeholder="Enter your email">
@@ -476,9 +479,26 @@
         </div>
     </footer>
     
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="./images/newsletter.jpeg" alt="Newsletter Image">
+        <a id="downloadBtn" class="download-btn" download="newsletter.jpg">Download</a>
+    </div>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
 
+    <script>
+         document.getElementById("openModal").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("downloadBtn").href = "./images/newsletter.jpeg";
+        });
+
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("imageModal").style.display = "none";
+        });
+    </script>
 
     
 </body>
